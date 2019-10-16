@@ -34,6 +34,7 @@ body {
   font-weight: 400;
   font-size: 14px;
   margin-top: 50px;
+  margin-left: 7px;
 }
 
 .the-game {
@@ -73,8 +74,8 @@ body {
 }
 
 .tic {
-  width: 100px;
-  height: 100px;
+  width: 10vh;
+  height: 19vw;
   border: 2px solid black;
   border-radius: 50%;
   display: none;
@@ -95,4 +96,42 @@ p {
   font-size: 700%;
   font-weight: lighter;
   display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    margin-top: 20px;
+  }
+
+  #circle-score,
+  #x-score {
+    font-size: 3vh;
+    margin-top: 7px;
+  }
+
+  .scores {
+    font-size: 2vh;
+    height: 13%;
+    font-family: "Roboto Mono", monospace;
+    margin-top: 8px;
+    margin-bottom: -10px;
+  }
+
+  .the-game {
+    width: 90vw;
+    height: 100vw;
+  }
+  p {
+    font-size: 70px;
+  }
+  .buttons {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+  }
+  .button {
+    opacity: 0.6;
+    border: 1px solid black;
+  }
 }

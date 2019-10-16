@@ -38,6 +38,11 @@ let firstPlayerTurn = true;
 let counter = 0;
 
 const play = e => {
+  // Sound played when each player make a move.
+  const playSound = new Audio("./click-sound.mp3");
+  playSound.play();
+
+  //
   const circle = e.target.querySelector(".tic");
   const x = e.target.querySelector("p");
   const location = e.target.getAttribute("id");
@@ -45,6 +50,9 @@ const play = e => {
   e.target.removeEventListener("click", play);
 
   if (firstPlayerTurn == true && circle) {
+    document.querySelector("#circle-team").style.backgroundColor = "green";
+    document.querySelector("#circle-team").style.opacity = ".3";
+
     // show circle
     circle.style.display = "flex";
 
